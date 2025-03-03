@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Resume Builder</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="form-container">
+                <h2>Enter Your Information</h2>
+                <form id="resumeForm">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="form-section">
+                        <h3>Educational Details</h3>
+                        <div class="education-entry">
+                            <h4>10th Grade</h4>
+                            <div class="form-group">
+                                <label for="tenth-school">Institution</label>
+                                <input type="text" id="tenth-school" name="tenth-school">
+                            </div>
+                            <div class="form-group">
+                                <label for="tenth-year">Year of Passing</label>
+                                <input type="text" id="tenth-year" name="tenth-year">
+                            </div>
+                            <div class="form-group">
+                                <label for="tenth-percentage">Percentage/CGPA</label>
+                                <input type="text" id="tenth-percentage" name="tenth-percentage">
+                            </div>
+                        </div>
+
+                        <div class="education-entry">
+                            <h4>Intermediate/12th Grade</h4>
+                            <div class="form-group">
+                                <label for="twelfth-school">Institution</label>
+                                <input type="text" id="twelfth-school" name="twelfth-school">
+                            </div>
+                            <div class="form-group">
+                                <label for="twelfth-year">Year of Passing</label>
+                                <input type="text" id="twelfth-year" name="twelfth-year">
+                            </div>
+                            <div class="form-group">
+                                <label for="twelfth-percentage">Percentage/CGPA</label>
+                                <input type="text" id="twelfth-percentage" name="twelfth-percentage">
+                            </div>
+                        </div>
+
+                        <div class="education-entry">
+                            <h4>Bachelor's Degree</h4>
+                            <div class="form-group">
+                                <label for="degree-type">Degree/Course</label>
+                                <input type="text" id="degree-type" name="degree-type" placeholder="BTech/BPharm/etc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="degree-institution">Institution</label>
+                                <input type="text" id="degree-institution" name="degree-institution">
+                            </div>
+                            <div class="form-group">
+                                <label for="degree-year">Year of Passing</label>
+                                <input type="text" id="degree-year" name="degree-year">
+                            </div>
+                            <div class="form-group">
+                                <label for="degree-percentage">Percentage/CGPA</label>
+                                <input type="text" id="degree-percentage" name="degree-percentage">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="form-section">
+                        <h3>Skills</h3>
+                        <div class="form-group">
+                            <textarea id="skills" name="skills" rows="3" placeholder="Enter your skills, separated by commas"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Hobbies -->
+                    <div class="form-section">
+                        <h3>Hobbies</h3>
+                        <div class="form-group">
+                            <textarea id="hobbies" name="hobbies" rows="3" placeholder="Enter your hobbies, separated by commas"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="form-section">
+                        <h3>Professional Experience</h3>
+                        <div id="experience-container">
+                            <div class="experience-entry">
+                                <div class="form-group">
+                                    <label for="exp-title-1">Job Title</label>
+                                    <input type="text" id="exp-title-1" name="exp-title-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exp-company-1">Company</label>
+                                    <input type="text" id="exp-company-1" name="exp-company-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exp-duration-1">Duration</label>
+                                    <input type="text" id="exp-duration-1" name="exp-duration-1" placeholder="e.g., Jan 2020 - Present">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exp-description-1">Description</label>
+                                    <textarea id="exp-description-1" name="exp-description-1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="add-experience" class="btn-secondary">Add More Experience</button>
+                    </div>
+
+                    <!-- References -->
+                    <div class="form-section">
+                        <h3>References</h3>
+                        <div id="reference-container">
+                            <div class="reference-entry">
+                                <div class="form-group">
+                                    <label for="ref-name-1">Name</label>
+                                    <input type="text" id="ref-name-1" name="ref-name-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ref-position-1">Position</label>
+                                    <input type="text" id="ref-position-1" name="ref-position-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ref-contact-1">Contact Information</label>
+                                    <input type="text" id="ref-contact-1" name="ref-contact-1">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="add-reference" class="btn-secondary">Add More Reference</button>
+                    </div>
+
+                    <!-- Additional Skills & Languages -->
+                    <div class="form-section">
+                        <h3>Additional Skills & Languages Known</h3>
+                        <div class="form-group">
+                            <textarea id="additional-skills" name="additional-skills" rows="3" placeholder="Enter additional skills and languages"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" id="generateResume" class="btn-primary">Generate Resume</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="preview-container" id="resumePreview">
+                <h2>Resume Preview</h2>
+                <div id="resumeContent" class="resume-content">
+                    <div class="resume-placeholder">Your resume will appear here once generated</div>
+                </div>
+                <button id="printResume" class="btn-primary" style="display: none;">Print/Save as PDF</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
